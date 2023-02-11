@@ -17,7 +17,7 @@ const CreatePost = () => {
       if(form.prompt && form.photo){
         setLoading(true)
         try{
-        const url = 'http://localhost:5000/api/v1/post'
+        const url = 'https://concerned-skirt-yak.cyclic.app/api/v1/post'
           const response = await fetch(url,{method:"POST",
                                       headers:{'Content-Type':'application/json'},
                                       body:JSON.stringify(form)
@@ -45,7 +45,7 @@ const CreatePost = () => {
   const generateImg = async()=>{
     if(form.prompt && form.name){
       try{
-        const url = 'http://localhost:5000/api/v1/dalle'
+        const url = 'https://concerned-skirt-yak.cyclic.app/api/v1/dalle'
         setGeneratingImg(true)
         const response = await fetch(url,{method:"POST",
                                           headers:{'Content-Type':'application/json'},

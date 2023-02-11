@@ -14,7 +14,7 @@ const Home = () => {
     const fetchPosts =async ()=>{
         try{
             setLoading(true)
-            const url = 'http://localhost:5000/api/v1/post'
+            const url = 'https://concerned-skirt-yak.cyclic.app/api/v1/post'
             const response = await fetch(url,{method:"GET",
                                               headers:{'Content-Type':'application/json'},
                                             })
